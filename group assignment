@@ -1,3 +1,8 @@
+**Wtite a language model to help your team write a program to do the following:
+*Take a text string as input
+*Outputs a message test the sentiment 
+*Program is written in C++
+
 #include <iostream>
 #include <string>
 
@@ -5,13 +10,12 @@ using namespace std;
 
 int main() {
     
-    // Input text string for sentiment check 
+// Input text string for sentiment check 
     string input_text;
     cout << "Enter the text string: ";
     getline(cin, input_text);
 
-
-    //Convert sentiment polarity to a sentiment message
+//Convert sentiment polarity to a sentiment message
     string result = "";
     string sentimentMess;
     double polarity = strtod(result.c_str(), NULL);
@@ -24,7 +28,7 @@ int main() {
         sentimentMess = "neutral";
     }
 
-    //Display the sentiment as the output
+//Display the sentiment as the output
     cout << "The sentiment of the text string: " << sentimentMess << endl;
 
     return 0;
