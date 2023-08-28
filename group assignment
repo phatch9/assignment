@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    
+    // Input text string for sentiment check 
+    string input_text;
+    cout << "Enter the text string: ";
+    getline(cin, input_text);
+
+
+    //Convert sentiment polarity to a sentiment message
+    string result = "";
+    string sentimentMess;
+    double polarity = strtod(result.c_str(), NULL);
+    
+    if (polarity > 0.0) {
+        sentimentMess = "positive";
+    } else if (polarity < 0.0) {
+        sentimentMess = "negative";
+    } else {
+        sentimentMess = "neutral";
+    }
+
+    //Display the sentiment as the output
+    cout << "The sentiment of the text string: " << sentimentMess << endl;
+
+    return 0;
+}
