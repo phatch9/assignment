@@ -1,1 +1,39 @@
+//Write a language model to help your team write a program to do the following:
+//Take a text string as input
+//Outputs a message test the sentiment 
+//Program is written in C++
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+// Function to analyze the sentiment of a text string
+
+string analyzeSentiment(const string& text) {
+    string lowercaseText = text;
+    transform(lowercaseText.begin(), lowercaseText.end(), lowercaseText.begin(), ::tolower);
+
+    if (lowercaseText.find("happy") != string::npos || lowercaseText.find("joy") != string::npos) {
+        return "positive";
+    } else if (lowercaseText.find("sad") != string::npos || lowercaseText.find("unhappy") != string::npos) {
+        return "negative";
+    } else {
+        return "neutral";
+    }
+}
+
+int main() {
+    string inputText;
+
+    cout << "Enter a text: ";
+    getline(cin, inputText);
+
+    string sentiment = analyzeSentiment(inputText);
+
+    cout << "The sentiment of the text is: " << sentiment << endl;
+
+    return 0;
+}
 
